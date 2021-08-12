@@ -1,66 +1,66 @@
 ---
 title: "Jabberwocky"
 author: "Lewis Carroll"
-output: pdf_document
+output: 
+  pdf_document:
+    includes:
+      in_header: "jstyle.sty"
+    keep_tex: true
+geometry: left = 0.6in, bottom = 0pt, top = 1.25in
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{=latex}
+\begin{tikzpicture}[overlay, remember picture]
+  \node[anchor=north west, inner sep=0pt]
+  at
+  ([xshift=-12.5cm, yshift=20.5cm] current page.south east)
+  {{\transparent{0.4}\includegraphics[width=12cm]{the-wock.png}}};
+\end{tikzpicture}
 
-’Twas brillig, and the slithy toves
+\let\oldnl=\\
 
-Did gyre and gimble in the wabe:
-      
-All mimsy were the borogoves,
+\newcount\evenv
+\begin{verse}
+\evenv1\relax%
+\def\\{\advance\evenv by1\ifodd\evenv\oldnl\else\oldnl\hspace*{2em}\fi}%
+$\,$\\
+’Twas brillig, and the slithy toves\\
+Did gyre and gimble in the wabe:\\
+All mimsy were the borogoves,\\
+And the mome raths outgrabe.\\
 
-And the mome raths outgrabe.
+“Beware the Jabberwock, my son!\\
+The jaws that bite, the claws that catch!\\
+Beware the Jubjub bird, and shun\\
+The frumious Bandersnatch!”\\
 
-“Beware the Jabberwock, my son!
+He took his vorpal sword in hand;\\
+Long time the manxome foe he sought—\\
+So rested he by the Tumtum tree\\
+And stood awhile in thought.\\
 
-The jaws that bite, the claws that catch!
-      
-Beware the Jubjub bird, and shun
+And, as in uffish thought he stood,\\
+The Jabberwock, with eyes of flame,\\
+Came whiffling through the tulgey wood,\\
+And burbled as it came!\\
 
-The frumious Bandersnatch!”
+One, two! One, two! And through and through\\
+The vorpal blade went snicker-snack!\\
+He left it dead, and with its head\\
+He went galumphing back.\\
 
-He took his vorpal sword in hand;
+“And hast thou slain the Jabberwock?\\
+Come to my arms, my beamish boy!\\
+O frabjous day! Callooh! Callay!”\\
+He chortled in his joy.\\
 
-Long time the manxome foe he sought—
-      
-So rested he by the Tumtum tree
-
-And stood awhile in thought.
-
-And, as in uffish thought he stood,
-
-The Jabberwock, with eyes of flame,
-      
-Came whiffling through the tulgey wood,
-
-And burbled as it came!
-
-One, two! One, two! And through and through
-
-The vorpal blade went snicker-snack!
-      
-He left it dead, and with its head
-
-He went galumphing back.
-
-“And hast thou slain the Jabberwock?
-
-Come to my arms, my beamish boy!
-      
-O frabjous day! Callooh! Callay!”
-
-He chortled in his joy.
-
-’Twas brillig, and the slithy toves
-
-Did gyre and gimble in the wabe:
-      
-All mimsy were the borogoves,
-
-And the mome raths outgrabe.
+’Twas brillig, and the slithy toves\\
+Did gyre and gimble in the wabe:\\
+All mimsy were the borogoves,\\
+And the mome raths outgrabe.\\
+\end{verse}
+```
