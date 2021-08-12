@@ -1,0 +1,12 @@
+# temp files to ignore
+*.swo
+*.swp
+
+
+# LaTeX bits to ignore
+*.tex
+*.aux
+*.fls
+*.fdb_latexmk
+*.pdf
+*.synctex.gz
